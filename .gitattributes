@@ -1,2 +1,2 @@
 results/cr_lb_ver-8.pickle filter=lfs diff=lfs merge=lfs -text
-results/models/cr_lb_ver-8/* filter=lfs diff=lfs merge=lfs -text
+results/models/cr_lb_ver-8/k-4_r-1/variables/variables.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text

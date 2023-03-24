@@ -1,0 +1,27 @@
+# Overview:
+Fixfit is a tool for parameter-compression to solve the inverse problem in models with redundant parameters.
+
+This repository contains code for FixFit, structured in a way to reproduce all results in our relevant article where we describe FixFit in details:
+"FixFit: using parameter-compression to solve the inverse problem in overdetermined models" - B Antal, A Chesebro, H Strey, L Mujica-Parodi, C Weistuch
+
+All necessary inputs (simulated data), intermediate outputs, and final outputs are included in this repository.
+
+# Content:
+- `data/`: simulated data used as inputs
+- `results/`: intermediate outputs and figures
+- `tools/`: code, see specifics below
+- code and output files contain prefixes "`tm2_`" and "`lb_`". These refer to the two model examples that were presented in the manuscript. "tm2" stands for the Kepler model and "lb" for Larter-Breakspear brain network model.
+- `tm2_neural_network.py`: performs the neural network approximation at various bottleneck dimensions for the Kepler model
+- `tm2_bottleneck_analysis.py`: performs the analysis of validation error at various bottlenecks for the Kepler model to identify the underlying complexity of the model and the corresponding latent parameter representation
+- `tm2_analysis.py`: performs downstream analyses at a selected latent parameter representation for the Kepler model. These include global sensitivity analysis with respect to input parameters and global fitting in input and latent parameter spaces.
+- `lb_neural_network.py`: performs the neural network approximation at various bottleneck dimensions for the Larter-Breakspear model
+- `lb_bottleneck_analysis.py`: performs the analysis of validation error at various bottlenecks dimensions for the Larter-Breakspear model to identify the underlying complexity of the model and the corresponding latent parameter representation
+- `lb_analysis.py`: performs downstream analyses at a selected latent parameter representation for the Larter-Breakspear model. These include global sensitivity analysis with respect to input parameters and global fitting in latent parameter space.
+
+# Instructions:
+- To run the code, first create a new environment using pip or conda
+- Run `install_dependencies.sh`, this will set up all dependencies for the code (for exact versions, see `environment.yml`)
+- Each analysis step can be run separately as all intermediate inputs are provided by default
+- If you wish to test the whole pipeline from end to end, you must uncomment all code snippets that are responsible for saving script outputs. By default no outputs are saved, the default intermediates are retained and used as inputs for subsequent steps
+- It is recommended to run the code in an integrated development environment (IDE) which enables running code sections as separate cells and displaying figures interactively (spyder, vscode).
+- Note that `tm2_neural_network.py` and `lb_neural_network.py` require a long time to run (on the scale of several hours). The subsequent scripts and analyses can be run within minutes. Therefore, as an alternative, one can skip the neural network training phase, use the already available training outputs and start at the stage of bottleneck analysis.

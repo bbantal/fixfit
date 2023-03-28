@@ -9,8 +9,8 @@ All necessary inputs (simulated data), intermediate outputs, and final outputs a
 # Content:
 - `data/`: simulated data used as inputs
 - `results/`: intermediate outputs and figures. NOTE this folder contains large files (>100MB) and requires extra steps to download to your system! There are two options to download these files:
-    - A) if you have github lfs established on your system you can simply clone this whole repository
-    - B) if you don't have github lfs, you can download this folder through this link, simply copy its contents to the cloned repository: https://drive.google.com/drive/folders/1cRglXICpqj-D_3F1qvMaUWibLOF87VCU?usp=sharing
+    - A) if you have Git LFS established on your system you can simply clone this whole repository
+    - B) if you don't have Git LFS, you can download this folder through this link, simply copy its contents to the cloned repository: https://drive.google.com/drive/folders/1cRglXICpqj-D_3F1qvMaUWibLOF87VCU?usp=sharing
 - `tools/`: code, see specifics below
 - code and output files contain prefixes "`tm2_`" and "`lb_`". These refer to the two model examples that were presented in the manuscript. "tm2" stands for the Kepler model and "lb" for Larter-Breakspear brain network model.
 - `tm2_neural_network.py`: performs the neural network approximation at various bottleneck dimensions for the Kepler model

@@ -1,5 +1,5 @@
 # Overview:
-Fixfit is a tool for parameter compression to solve the inverse problem in models with redundant parameters.
+FixFit is a tool for parameter compression to solve the inverse problem in models with redundant parameters.
 
 This repository contains code for FixFit, structured in a way to reproduce all results in our relevant article where we describe FixFit in detail:
 "FixFit: using parameter-compression to solve the inverse problem in overdetermined models" - B Antal, A Chesebro, H Strey, L Mujica-Parodi, C Weistuch
